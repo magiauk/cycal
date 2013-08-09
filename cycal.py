@@ -115,5 +115,6 @@ if __name__ == '__main__':
     html = get_html(response)
     ical = parse(html)
 
-    print ical
+    with open('cybozu.ics', 'w') as f:
+        f.write(ical)
 
