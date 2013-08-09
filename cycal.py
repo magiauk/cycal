@@ -102,14 +102,7 @@ def parse(html):
                 ical_event.add('dtend', dtend_prop)
 
             ical_event.add('summary', event_line['detail'])
-            ical_event.add('location', u'場所')
             ical.add_component(ical_event)
-
-
-#    for bannerrow in root.xpath('//tr[@class="bannerrow"]'):
-#            for event in bannerrow.find_class('bannerevent'):
-#                print event.get('href')
-#                print event.text
 
     ical.add('version', '2.0')
     ical.add('prodid', '-//kuma//cycal.py//EN')
