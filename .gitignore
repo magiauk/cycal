@@ -1,0 +1,31 @@
+#
+#
+#
+# directory
+cache/
+log/
+
+# file
+*.o
+*.lo
+*.la
+*#
+.*.rej
+*.rej
+.*~
+*~
+.#*
+.DS_Store
+*.sw[po]
+tags
+Thumbs.db
+.vim/.netrwhist
+.gitattributes
+~$*.doc
+~$*.docx
+~WR*.tmp
+
+#
+*.pyc
+settings.py
+.python-version
