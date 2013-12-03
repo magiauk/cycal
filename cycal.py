@@ -85,7 +85,11 @@ def parse(html):
                 startend_time = event_line['time'].split('-')
                 start_time = startend_time[0]
                 start_hhmm = start_time.split(':')
-                end_time = startend_time[1]
+                if (len(startend_time) == 1):
+                    event_line['time'] = event_line['time'].strip() + '-' + event_line['time'].strip()
+                    end_time = startend_time[0]
+                else:
+                    end_time = startend_time[1]
                 end_hhmm = end_time.split(':')
                 ical_event.add('dtstart', datetime(int(year), int(mmdd[0]),
                     int(mmdd[1]), int(start_hhmm[0]), int(start_hhmm[1])))
